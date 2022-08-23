@@ -3,11 +3,13 @@
 These are only the main files, the environment set-up that would be requires to run the server would have to be configures separately
 There is already a running version of the same online at this link: https://booksreview-api.herokuapp.com/
 
+<hr>
 
 [Unfortunately, Goodreads has deactivated support of API keys since Dec 2020 and this project no longer works until a certain point]
 
 [However, the logic is still applicable, so if a different book related API was used, this project would still be relevant after some minor changes]
 
+<hr>
 
 Web Programming with Python and JavaScript
 
@@ -18,6 +20,8 @@ If they do not already have an account they can decide to sign up on the registr
 Upon successuful registration, the user can then login and be directed to the home page (home.html). the page shows the username they are signed in as, an option to log out and a text field to search for a book with a drop down menu. The user can then search for any book through even part of the books ISBN, title or author, provided they chose the correct drop down menu option.
 
 Once submitted, the page will load a table with 4 columns (for isbn, title, author and year respectively) showing all the matches to the users search query.
+
+<hr>
 
 [From this point onwards, this project is depricated due to the lack of proper data retrieval from Goodreads]
 
