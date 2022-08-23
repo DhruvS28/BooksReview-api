@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login Page
+{% endblock %}
+
+{% block body%}
+<div>
+	<form action="{{url_for('index')}}" method="post" autocomplete="off">
+		<input type="text" name="username" placeholder="Username" style="margin: 10px; margin-top: 200px;">
+		<br>
+		<input type="password" name="password" placeholder="Password">
+		<br>
+		<button style="margin: 10px;">Sign In</button>
+	</form>
+	<form action="{{ url_for('register')}}" method="post" style="margin: 0px;">
+		<button>Sign up</button>
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Book Page
+{% endblock %}
+
+{% block body %}
+	{% for books in test %}
+	<form action="{{ url_for('search1')}}" id="left">
+		<button style="width: 100px; font-size: 1em; float: left;">Go back to search</button>
+	</form>
+	<form action="{{ url_for('index1')}}" id="rgt" style="margin-bottom: 100px;">
+		<h4 style="margin: 0px; color: #f90; -webkit-text-stroke: .3px black;">Signed in as, {{u1}}</h4>
+		<button style="width: 100px; font-size: 1em; float: right;">Log Out</button>
+	</form>
+	<h1 style="margin: 30px; margin-bottom: 0px; color: #f90; -webkit-text-stroke: .3px black;">
+		The book {{ books.title }} ({{ books.isbn }}), was written by {{ books.author }} in {{ books.year }} 
+		which has an average rating of {{ avg }}, collected from {{ count }} readers.</h1>
+	<br>
+		<p style="font-size: 1.5em; margin: 0px; margin-left: 50px; color: #f90; -webkit-text-stroke: .3px black;"><b><u>Your Review ~</u></b>
+			{{ reviews.review }}</p>
+	<br>
+	<form action="{{ url_for('review', isbn=books.isbn, u1=u1)}}" method="post" autocomplete ="off" style="margin:0px">
+		<select name="rate" style="position: relative; right: 223px; top: 25px; height: 46px; width: 130px">
+			<option value="0" selected></option>
+			<option value="1">1 Star</option>
+			<option value="2">2 Stars</option>
+			<option value="3">3 Stars</option>
+			<option value="4">4 Stars</option>
+			<option value="5">5 Stars</option>
+		</select>
+		<button style="font-size: 1.08em; width: 100px; padding: 0px; position: relative; top: 10px; left: 227px;"> Submit Review </button>
+		<br>
+		<textarea type="text" name="review" style="height: 200px; width: 700px;" id="left" rows="1" placeholder="Give this book a review"></textarea>
+	</form>
+	{% endfor %}
+
+{% endblock %}

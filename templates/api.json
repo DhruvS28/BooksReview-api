@@ -1,0 +1,9 @@
+
+{
+    "title": "{{books.title}}",
+    "author": "{{books.author}}",
+    "year": "{{books.year}}",
+    "isbn": "{{books.isbn}}",
+    "review_count": "{{count}}",
+    "average_score": "{{avg}}"
+}

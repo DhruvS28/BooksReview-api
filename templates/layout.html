@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+
+	body {
+		background-color: #456;
+	}
+
+	form, h1 {
+		text-align: center;
+	}
+
+	input, button, select, textarea {
+		font-size: 2em;
+		text-align: center;
+		background-color: #f90;
+		margin: 10px;
+	}
+
+	#left {
+		text-align: left;
+	}
+
+	#rgt {
+		text-align: right;
+	}
+
+	#cent {
+		text-align: center;
+	}
+
+	table, tr, td, th {
+		border: solid;
+		border-color: black;
+		border-collapse: collapse;
+		background-color: #66f;
+		padding: 10px;
+		font-weight:;
+	}
+
+	u {
+		text-decoration-color: #f90;
+	}
+</style>
+
+<head>
+	<title>{% block title%} {% endblock %}</title>
+</head>
+<body>
+	{% block body %} {% endblock %}
+</body>
+</html>
